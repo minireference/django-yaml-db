@@ -21,6 +21,8 @@ from rest_framework import routers, serializers, viewsets
 from rest_framework_yaml.parsers import YAMLParser
 from rest_framework_yaml.renderers import YAMLRenderer
 
+from albums.api import AlbumsViewSet
+
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -41,10 +43,21 @@ class YamlUserViewSet(viewsets.ModelViewSet):
     parser_classes = (YAMLParser,)
     renderer_classes = (YAMLRenderer,)
 
+
+
+
+
+
+
+
+
+
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'usersyaml', YamlUserViewSet)
+router.register(r'albums', AlbumsViewSet)
+
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

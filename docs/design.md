@@ -34,6 +34,8 @@ Each author runs their own instance of the application, backed by their personal
 fork of the data repository. To make things concrete, let's assume the content
 consists of a hierarchy of topics (folders) and articles (files).
 
+![Diagram showing how to sync using github pull request](images/use-git-for-db-sync.png)
+
 A YAML export consists of a YAML file to represent the topic hierarchy and an
 associated `storage` directory that stores files, organized as a content-addressable filesystem
 (e.g. storage/9249a531aef1 contains the contents of the image whose hash is 9249a531aef1).
